@@ -1,0 +1,111 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A Birthday Surprise 💗</title>
+
+<style>
+body {
+  margin: 0;
+  padding: 25px 15px;
+  text-align: center;
+  font-family: Arial;
+  color: white;
+  background: linear-gradient(135deg,#ff9aaf,#d58bdf,#9d8de8);
+  min-height: 100vh;
+}
+h1 { margin-top: 55px; }
+button {
+  border: none;
+  padding: 15px 25px;
+  margin: 12px;
+  border-radius: 30px;
+  background: white;
+  color: #c04491;
+  font-size: 17px;
+  font-weight: bold;
+}
+.screen { display: none; }
+#one { display: block; }
+.cake { font-size: 100px; }
+.balloon { font-size: 45px; }
+</style>
+</head>
+
+<body>
+
+<div id="one" class="screen">
+<h1>🎀 A Special Surprise 🎀</h1>
+<h2>For My Best Friend 💗</h2>
+<div class="cake">🎂</div>
+<p>Someone special has a birthday today!</p>
+<button onclick="show('two')">Start Surprise ✨</button>
+</div>
+
+<div id="two" class="screen">
+<h1>Make A Wish! 🕯️</h1>
+<div class="cake">🎂</div>
+<p>Close your eyes and blow your candle!</p>
+<button onclick="show('three')">Blow Candle 💨</button>
+</div>
+
+<div id="three" class="screen">
+<h1>Look What's Here! 🎁</h1>
+<div style="font-size:100px">🎁</div>
+<p>A little gift filled with love!</p>
+<button onclick="show('four')">Open Your Gift 💝</button>
+</div>
+
+<div id="four" class="screen">
+<h1>POP POP POP! 🎈</h1>
+<div id="balloons">
+<button onclick="pop(this)">🎈 POP</button>
+<button onclick="pop(this)">🎈 POP</button>
+<button onclick="pop(this)">🎈 POP</button>
+<button onclick="pop(this)">🎈 POP</button>
+</div>
+<p>Pop all the balloons!</p>
+<button onclick="show('five')">See Your Surprise ❤️</button>
+</div>
+
+<div id="five" class="screen">
+<h1> SURPRISE!!! 🥳</h1>
+<div style="font-size:65px">💐💗🎉</div>
+<h2>HAPPY BIRTHDAY!</h2>
+<p>To my beautiful friend 💕</p>
+<button onclick="show('six')">Read Your Wish 💌</button>
+</div>
+
+<div id="six" class="screen">
+<h1>Dear Best Friend ❤️</h1>
+<h2>Happy Birthday! 🎂</h2>
+<p>
+May your life always be filled with happiness,
+beautiful memories, endless smiles and love.
+You deserve all the wonderful things in this world.
+Thank you for being such a special part of my life.
+</p>
+<h2>Lots of Love! 💗</h2>
+<p>From your friend 🎀</p>
+<div style="font-size:60px">🌷🦋💝</div>
+</div>
+
+<script>
+function show(id) {
+ document.querySelectorAll('.screen').forEach(
+  s => s.style.display = 'none'
+ );
+ document.getElementById(id).style.display = 'block';
+ window.scrollTo(0,0);
+}
+function pop(btn) {
+ btn.innerHTML = '💥 POPPED!';
+ btn.disabled = true;
+}
+show('one');
+</script>
+
+</body>
+  </html>
+  
